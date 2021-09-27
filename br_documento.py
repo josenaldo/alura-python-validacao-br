@@ -20,7 +20,7 @@ class DocCpf:
         if(self.valida(documento)):
             self.__valor = documento
         else:
-            raise ValueError("CPF Inválido!")
+            raise ValueError(f"O CPF informado ({documento}) é inválido!")
 
     def __repr__(self):
         return self.formata()
@@ -44,7 +44,7 @@ class DocCnpj:
         if (self.valida(documento)):
             self.__valor = documento
         else:
-            raise ValueError("CNPJ Inválido!")
+            raise ValueError(f"O CNPJ informado ({documento}) é inválido!")
 
     def __repr__(self):
         return self.formata()

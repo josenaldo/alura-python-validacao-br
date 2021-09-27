@@ -1,4 +1,4 @@
-from documento import Documento
+from br_documento import Documento
 
 
 def cria_e_imprime_documento(tipo_documento, numero_documento):
