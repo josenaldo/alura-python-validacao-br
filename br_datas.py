@@ -1,11 +1,11 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 import locale
 
 
 class DataBr:
 
     def __init__(self):
-        self.__criado_em = datetime.today()
+        self.__criado_em = datetime.today() - timedelta(days=3, hours=12)
         locale.setlocale(locale.LC_TIME, "pt_BR")
 
     def __repr__(self):
@@ -28,3 +28,7 @@ class DataBr:
 
     def data_formatada(self):
         return self.criado_em.strftime('%d/%m/%Y %H:%M')
+
+    def tempo_de_cadastro(self):
+        return datetime.today() - self.criado_em
+
